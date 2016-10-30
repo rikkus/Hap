@@ -1,0 +1,75 @@
+﻿@model Hap.Models.Entities.Contact
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Contact</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Street)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Street)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PostCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PostCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LoginEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LoginEmail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AddedUtc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AddedUtc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UpdatedUtc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UpdatedUtc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DeletedUtc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DeletedUtc)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

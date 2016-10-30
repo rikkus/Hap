@@ -1,0 +1,113 @@
+﻿@model Hap.Models.Entities.Space
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Space</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ShortDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ShortDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LongDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LongDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Street)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Street)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PostCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PostCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PricePerHourPoundsSterling)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PricePerHourPoundsSterling)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MaxCapacityPersons)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaxCapacityPersons)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AreaMetresSquared)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AreaMetresSquared)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WebLink)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WebLink)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AddedUtc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AddedUtc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UpdatedUtc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UpdatedUtc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DeletedUtc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DeletedUtc)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

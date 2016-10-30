@@ -1,0 +1,94 @@
+﻿@model IEnumerable<Hap.Models.Entities.Space>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ShortDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LongDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Street)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PostCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PricePerHourPoundsSterling)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MaxCapacityPersons)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AreaMetresSquared)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WebLink)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AddedUtc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UpdatedUtc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DeletedUtc)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ShortDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LongDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Street)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PostCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PricePerHourPoundsSterling)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaxCapacityPersons)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AreaMetresSquared)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WebLink)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AddedUtc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UpdatedUtc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DeletedUtc)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>
